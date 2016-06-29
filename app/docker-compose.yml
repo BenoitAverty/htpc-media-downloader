@@ -1,0 +1,17 @@
+version: '2'
+services:
+  httpd:
+    build: ./images/httpd
+    ports:
+      - "80:80"
+    volumes:
+      - "./config/httpd:/usr/local/apache2/conf"
+      - "./logs/httpd:/mnt/logs"
+      - "./data:/mnt/data"
+  sabnzbd:
+    build: ./images/sabnzbd
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./config/sabnzbd:/mnt/config"
+      - "./data:/mnt/data"

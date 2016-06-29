@@ -1,5 +1,5 @@
 Vagrant.configure(2) do |config|
-  config.vm.box = "debian/jessie64"
+  config.vm.box = "ubuntu/trusty64"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -13,5 +13,5 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder ".", "/vagrant", disabled: true
 
   # Install docker and docker-compose
-  config.vm.provision :shell,   path: "vagrant_provision.sh"
+  config.vm.provision :shell, path: "./vagrant_provision.sh"
 end
