@@ -1,0 +1,15 @@
+<Config>
+  <Port>8080</Port>
+  <UrlBase>sonarr</UrlBase>
+  <BindAddress>*</BindAddress>
+  <SslPort>9898</SslPort>
+  <EnableSsl>False</EnableSsl>
+  <ApiKey></ApiKey>
+  <AuthenticationMethod>None</AuthenticationMethod>
+  <LogLevel>Debug</LogLevel>
+  <Branch>master</Branch>
+  <LaunchBrowser>False</LaunchBrowser>
+  <SslCertHash></SslCertHash>
+  <UpdateMechanism>BuiltIn</UpdateMechanism>
+  <UpdateAutomatically>False</UpdateAutomatically>
+</Config>

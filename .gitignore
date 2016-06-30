@@ -1,7 +1,25 @@
-.vagrant
-**/logs/**
-**/Downloads/**
+# httpd run artifacts
+
+logs/httpd/**
+
+# Sonarr run artifacts
+
+logs/sonarr/**
+
+# Sabnzb run artifacts
+
+logs/sabnzbd/**
 app/config/sabnzbd/admin
-app/config/sabnzbd/sabnzbd.ini.bak #contains password
+app/config/sabnzbd/sabnzbd.ini.bak
+
+# Data
+
 data/**
-!.gitkeep
+
+# Vagrant
+
+.vagrant
+
+# Keep folders
+
+!**/.gitkeep
