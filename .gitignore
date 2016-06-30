@@ -1,25 +1,29 @@
 # httpd run artifacts
 
-logs/httpd/**
+app/logs/httpd/**
 
 # Sonarr run artifacts
 
-logs/sonarr/**
+app/logs/sonarr/**
+app/config/sonarr/*db*
+app/config/sonarr/nzbdrone.pid
+app/config/sonarr/logs
 
 # Sabnzb run artifacts
 
-logs/sabnzbd/**
+app/logs/sabnzbd/**
 app/config/sabnzbd/admin
+app/config/sabnzbd/logs
 app/config/sabnzbd/sabnzbd.ini.bak
 
 # Data
 
-data/**
+app/data/**
 
 # Vagrant
 
 .vagrant
 
 # Keep folders
-
-!**/.gitkeep
+!app/**/
+!app/**/.gitkeep
