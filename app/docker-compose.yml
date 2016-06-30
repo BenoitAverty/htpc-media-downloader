@@ -4,7 +4,7 @@ services:
     build: ./images/httpd
     environment:
       - PUID=1000
-      - GUID=1000
+      - PGID=1000
     ports:
       - 80:80
       - 443:443
@@ -16,19 +16,21 @@ services:
     build: ./images/sonarr
     environment:
       - PUID=1000
-      - GUID=1000
+      - PGID=1000
     volumes:
       - "/dev/rtc:/dev/rtc:ro" # mono theows exception otherwise
       - "./config/sonarr:/config"
+      - "./logs/sonarr:/config/logs"
       - "./data/TV:/tv"
-      - "./data/downloads/complete:/downloads"
+      - "./data/work/nzb/complete:/downloads"
   sabnzbd:
     image: linuxserver/sabnzbd
     environment:
       - PUID=1000
-      - GUID=1000
+      - PGID=1000
     volumes:
       - "./config/sabnzbd:/config"
+      - "./logs/sabnzbd:/config/logs"
       - "./data/work/nzb/complete:/downloads"
       - "./data/work/nzb/incomplete:/incomplete-downloads"
       - "/etc/localtime:/etc/localtime:ro"
