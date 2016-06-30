@@ -12,7 +12,7 @@ app/config/sonarr/logs
 # Sabnzb run artifacts
 
 app/logs/sabnzbd/**
-app/config/sabnzbd/admin
+app/config/sabnzbd/admin/**
 app/config/sabnzbd/logs
 app/config/sabnzbd/sabnzbd.ini.bak
 
