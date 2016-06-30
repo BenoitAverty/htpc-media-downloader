@@ -1,5 +1,7 @@
 .vagrant
 **/logs/**
 **/Downloads/**
+app/config/sabnzbd/admin
+app/config/sabnzbd/sabnzbd.ini.bak #contains password
 data/**
 !.gitkeep

@@ -18,6 +18,6 @@ RUN add-apt-repository -y  ppa:jcfp/ppa && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
 
-EXPOSE 8080
+EXPOSE 8081
 
 CMD ["/usr/bin/sabnzbdplus","--config-file","/mnt/config","--server",":8081","--console"]

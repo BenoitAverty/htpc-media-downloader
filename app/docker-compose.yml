@@ -1,5 +1,12 @@
 version: '2'
 services:
+  sonarr:
+    image: linuxserver/sonarr
+    volumes:
+      - "/dev/rtc:/dev/rtc:ro" # mono theows exception otherwise
+      - "./config/sonarr:/config"
+      - "./data/TV:/tv"
+      - "./data/downloads/complete:/downloads"
   httpd:
     build: ./images/httpd
     ports:
@@ -10,8 +17,6 @@ services:
       - "./data:/mnt/data"
   sabnzbd:
     build: ./images/sabnzbd
-    ports:
-      - "8080:8080"
     volumes:
       - "./config/sabnzbd:/mnt/config"
       - "./data:/mnt/data"
