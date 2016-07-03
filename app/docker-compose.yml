@@ -2,9 +2,6 @@ version: '2'
 services:
   httpd:
     build: ./images/httpd
-    environment:
-      - PUID=1000
-      - PGID=1000
     ports:
       - 80:80
       - 443:443
@@ -14,23 +11,26 @@ services:
       - "./data:/config/www"
   sonarr:
     build: ./images/sonarr
-    environment:
-      - PUID=1000
-      - PGID=1000
     volumes:
       - "/dev/rtc:/dev/rtc:ro" # mono theows exception otherwise
       - "./config/sonarr:/config"
       - "./logs/sonarr:/config/logs"
       - "./data/TV:/tv"
+      - "./data/work/drone-factory:/drone-factory"
       - "./data/work/nzb/complete:/downloads"
   sabnzbd:
-    image: linuxserver/sabnzbd
-    environment:
-      - PUID=1000
-      - PGID=1000
+    build: ./images/sabnzbd
     volumes:
       - "./config/sabnzbd:/config"
       - "./logs/sabnzbd:/config/logs"
       - "./data/work/nzb/complete:/downloads"
       - "./data/work/nzb/incomplete:/incomplete-downloads"
+      - "/etc/localtime:/etc/localtime:ro"
+  couchpotato:
+    build: ./images/couchpotato
+    volumes:
+      - "./config/couchpotato:/config"
+      - "./logs/couchpotato:/data/logs"
+      - "./data/Movies:/movies"
+      - "./data/work/nzb/complete:/downloads"
       - "/etc/localtime:/etc/localtime:ro"

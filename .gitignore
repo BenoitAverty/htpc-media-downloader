@@ -16,6 +16,10 @@ app/config/sabnzbd/admin/**
 app/config/sabnzbd/logs
 app/config/sabnzbd/sabnzbd.ini.bak
 
+# Couchpotato run artifacts
+
+app/logs/couchpotato/**
+
 # Data
 
 app/data/**
