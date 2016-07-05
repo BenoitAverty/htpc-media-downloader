@@ -6,7 +6,7 @@
   <EnableSsl>False</EnableSsl>
   <ApiKey></ApiKey>
   <AuthenticationMethod>None</AuthenticationMethod>
-  <LogLevel>Debug</LogLevel>
+  <LogLevel>Info</LogLevel>
   <Branch>master</Branch>
   <LaunchBrowser>False</LaunchBrowser>
   <SslCertHash></SslCertHash>

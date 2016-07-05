@@ -6,6 +6,7 @@ app/logs/httpd/**
 
 app/logs/sonarr/**
 app/config/sonarr/*db*
+!app/config/sonarr/nzbdrone.db
 app/config/sonarr/nzbdrone.pid
 app/config/sonarr/logs
 
