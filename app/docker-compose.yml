@@ -18,19 +18,17 @@ services:
       - "./data/TV:/tv"
       - "./data/work/drone-factory:/drone-factory"
       - "./data/work/nzb/complete:/downloads"
-  sabnzbd:
-    build: ./images/sabnzbd
-    volumes:
-      - "./config/sabnzbd:/config"
-      - "./logs/sabnzbd:/config/logs"
-      - "./data/work/nzb/complete:/downloads"
-      - "./data/work/nzb/incomplete:/incomplete-downloads"
-      - "/etc/localtime:/etc/localtime:ro"
   couchpotato:
     build: ./images/couchpotato
     volumes:
       - "./config/couchpotato:/config"
-      - "./logs/couchpotato:/data/logs"
+      - "./logs/couchpotato:/couchpotato_work/logs"
       - "./data/Movies:/movies"
       - "./data/work/nzb/complete:/downloads"
       - "/etc/localtime:/etc/localtime:ro"
+  nzbget:
+    build: ./images/nzbget
+    volumes:
+      - "./config/nzbget:/config"
+      - "./data/work/nzbget:/downloads"
+      - "./logs/nzbget:/logs"

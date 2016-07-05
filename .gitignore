@@ -9,16 +9,13 @@ app/config/sonarr/*db*
 app/config/sonarr/nzbdrone.pid
 app/config/sonarr/logs
 
-# Sabnzb run artifacts
-
-app/logs/sabnzbd/**
-app/config/sabnzbd/admin/**
-app/config/sabnzbd/logs
-app/config/sabnzbd/sabnzbd.ini.bak
-
 # Couchpotato run artifacts
 
 app/logs/couchpotato/**
+
+# nzbget run artifacts
+
+app/logs/nzbget/**
 
 # Data
 
