@@ -17,14 +17,14 @@ services:
       - "./logs/sonarr:/config/logs"
       - "./data/TV:/tv"
       - "./data/work/drone-factory:/drone-factory"
-      - "./data/work/nzbget/complete:/downloads"
+      - "./data/work/nzbget:/downloads"
   couchpotato:
     build: ./images/couchpotato
     volumes:
       - "./config/couchpotato:/config"
       - "./logs/couchpotato:/couchpotato_work/logs"
       - "./data/Movies:/movies"
-      - "./data/work/nzbget/complete:/downloads"
+      - "./data/work/nzbget:/downloads"
       - "/etc/localtime:/etc/localtime:ro"
   nzbget:
     build: ./images/nzbget
