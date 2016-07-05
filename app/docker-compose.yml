@@ -24,7 +24,7 @@ services:
       - "./config/couchpotato:/config"
       - "./logs/couchpotato:/couchpotato_work/logs"
       - "./data/Movies:/movies"
-      - "./data/work/nzb/complete:/downloads"
+      - "./data/work/nzbget/complete:/downloads"
       - "/etc/localtime:/etc/localtime:ro"
   nzbget:
     build: ./images/nzbget
