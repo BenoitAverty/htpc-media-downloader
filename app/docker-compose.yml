@@ -17,7 +17,7 @@ services:
       - "./logs/sonarr:/config/logs"
       - "./data/TV:/tv"
       - "./data/work/drone-factory:/drone-factory"
-      - "./data/work/nzb/complete:/downloads"
+      - "./data/work/nzbget/complete:/downloads"
   couchpotato:
     build: ./images/couchpotato
     volumes:
