@@ -22,6 +22,7 @@ services:
     build: ./images/couchpotato
     volumes:
       - "./config/couchpotato:/config"
+      - "./data/work/couchpotato:/couchpotato_work"
       - "./logs/couchpotato:/couchpotato_work/logs"
       - "./data/Movies:/movies"
       - "./data/work/nzbget:/downloads"
