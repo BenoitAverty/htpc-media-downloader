@@ -21,6 +21,10 @@ app/logs/couchpotato/**
 
 app/logs/nzbget/**
 
+# Rtorrent / ruTorrent run artifacts
+app/logs/rtorrent/**
+
+
 # Data
 
 app/data/**

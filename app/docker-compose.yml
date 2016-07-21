@@ -39,5 +39,7 @@ services:
       - "45566:45566"
       - "9527:9527/udp"
     volumes:
-      - "./config/rtorrent:/config"
+      - "./config/rtorrent/nginx:/config/nginx"
+      - "./config/rtorrent/rtorrent:/config/rtorrent"
+      - "./logs/rtorrent:/config/log"
       - "./data/work/drone-factory:/downloads"
