@@ -33,3 +33,11 @@ services:
       - "./config/nzbget:/config"
       - "./data/work/nzbget:/downloads"
       - "./logs/nzbget:/logs"
+  rtorrent:
+    build: ./images/rtorrent
+    ports:
+      - "45566:45566"
+      - "9527:9527/udp"
+    volumes:
+      - "./config/rtorrent:/config"
+      - "./data/work/drone-factory:/downloads"
